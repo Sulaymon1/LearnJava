@@ -1,4 +1,4 @@
-<h2>Java Learning Based System Project <h2>
+<h2>Java Learning Based System Project </h2>
 The main aim of the Java Learning Based System project is to provide 
  light software system which will improve the
  education system by changing manual to automating the tasks.
