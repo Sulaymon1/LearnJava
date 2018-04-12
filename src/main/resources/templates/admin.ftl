@@ -250,7 +250,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">New course</h4>
 
-                                <form class="forms-sample" action="/admin/addCourse" method="post">
+                                <form class="forms-sample" id="newCourseForm" action="/admin/addCourse" method="post">
                                     <div class="form-group">
                                         <input type="text" name="courseName" class="form-control" placeholder="Course name">
                                     </div>
@@ -285,6 +285,7 @@
                                         <label class="badge badge-danger">${error!}</label>
                                     </div>
                                     <button type="submit" class="btn btn-success mr-2">Submit</button>
+                                    <#--todo cancel to reset -->
                                     <button class="btn btn-light">Cancel</button>
                                 </form>
 
@@ -349,6 +350,8 @@
 <script src="/admin/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- endinject -->
 <!-- Plugin js for this page-->
+<script src="/admin/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/admin/node_modules/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
 <script src="/admin/js/jq.tablesort.js"></script>
 <script src="/admin/js/tablesorter.js"></script>
 <!-- End plugin js for this page-->
@@ -359,6 +362,8 @@
 <!-- endinject -->
 <!-- Custom js for this page-->
 <script src="/admin/js/file-upload.js"></script>
+<script src="/admin/js/courseValidationAdmin.js"></script>
+<script src="/admin/js/bt-maxLength.js"></script>
 <!-- End custom js for this page-->
 <script>
     function deleteCourse(id) {

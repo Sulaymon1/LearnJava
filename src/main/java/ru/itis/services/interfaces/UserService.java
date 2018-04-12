@@ -7,4 +7,8 @@ import ru.itis.models.User;
  */
 public interface UserService {
     void registerNewUser(User user);
+
+    User getUser(Long id);
+
+    void updateUser(User user);
 }

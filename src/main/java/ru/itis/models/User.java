@@ -37,8 +37,14 @@ public class User {
     @Max(value = 70, message = "age can't be more than 70")
     private Integer age;
 
+    @Column(columnDefinition = "varchar default '/admin/images/default.png'")
+    private String image = "/admin/images/default.png";
+    private String github;
+
     @NotNull
     private String phoneNumber;
+
+    private String address;
 
     @NotNull
     @Column(unique = true)

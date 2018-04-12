@@ -25,4 +25,15 @@ public class UserServiceImpl implements UserService {
         user.setHashPassword(encodedPass);
         userRepository.save(user);
     }
+
+    @Override
+    public User getUser(Long id){
+        User user = userRepository.findOne(id);
+        return user;
+    }
+
+    @Override
+    public void updateUser(User user){
+        userRepository.save(user);
+    }
 }
