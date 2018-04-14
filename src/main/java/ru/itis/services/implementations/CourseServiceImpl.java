@@ -24,8 +24,8 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public Course getCourseByName(String name) {
-        Course course = courseRepository.findFirstByCourseName(name);
+    public Course getCourseById(Long id) {
+        Course course = courseRepository.findFirstById(id).get();
         return course;
     }
 

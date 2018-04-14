@@ -33,11 +33,18 @@ public class CourseController {
         return "index";
     }
 
-    @GetMapping("/course/{name}")
-    public String getCoursePage(@PathVariable("name") String name, @ModelAttribute("model") ModelMap modelMap){
-        Course course = courseService.getCourseByName(name);
+    @GetMapping("/courses")
+    public String getCoursesPage(ModelMap modelMap){
+        List<Course> allCourses = courseService.getAllActiveCourse();
+        modelMap.addAttribute("courses", allCourses);
+        return "courseListPage";
+    }
+
+    @GetMapping("/course/{id}")
+    public String getCoursePage(@PathVariable("id") Long id,  ModelMap modelMap){
+        Course course = courseService.getCourseById(id);
         modelMap.addAttribute("course", course);
-        return "";
+        return "coursePage";
     }
 
 

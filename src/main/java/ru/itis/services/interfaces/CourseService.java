@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface CourseService {
     void addNewCourse(Course course);
-    Course getCourseByName(String name);
+    Course getCourseById(Long id);
     List<Course> getAllCourses();
 
     List<Course> getAllActiveCourse();

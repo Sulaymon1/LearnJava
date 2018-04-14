@@ -10,7 +10,6 @@ import java.util.Optional;
  * Created by Sulaymon on 03.04.2018.
  */
 public interface CourseRepository extends JpaRepository<Course, Long> {
-    Course findFirstByCourseName(String name);
     Optional<Course> findCourseByCourseName(String name);
     List<Course> findAllByActiveTrue();
     Optional<Course> findFirstById(Long id);

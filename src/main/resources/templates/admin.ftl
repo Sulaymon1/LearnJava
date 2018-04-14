@@ -1,3 +1,4 @@
+<#import 'decoratorNavigation.ftl' as decorator>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +26,8 @@
 <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
 
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <@decorator.nav/>
+  <#--  <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper">
             <a class="navbar-brand brand-logo" href="../../index.html"><img src="/admin/images/logo.svg" alt="logo"></a>
             <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="/admin/images/logo_mini.svg" alt="logo"></a>
@@ -153,7 +155,8 @@
                 <span class="icon-menu icons"></span>
             </button>
         </div>
-    </nav>
+    </nav>-->
+
 
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">

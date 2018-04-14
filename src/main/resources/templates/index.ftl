@@ -1,3 +1,4 @@
+<#import 'decoratorNavbar.ftl' as navbar>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,28 +26,11 @@
 <body>
 
 <div class="site-content">
+
     <header class="site-header collapsed-nav" data-bg-image="">
         <div class="container">
             <div class="header-bar">
-                <a href="/index" class="branding">
-                    <img src="/images/logo.png" alt="" class="logo">
-                    <div class="logo-type">
-                        <h1 class="site-title">JPower</h1>
-                        <small class="site-description">Tagline goes here</small>
-                    </div>
-                </a>
-
-                <nav class="main-navigation">
-                    <button class="menu-toggle"><i class="fa fa-bars"></i></button>
-                    <ul class="menu">
-                        <li class="home menu-item current-menu-item"><a href="/index"><img src="/images/home-icon.png" alt="Home"></a></li>
-                        <li class="menu-item"><a href="/about">About</a></li>
-                        <li class="menu-item"><a href="/services">Services</a></li>
-                        <li class="menu-item"><a href="/projects">Our projects</a></li>
-                        <li class="menu-item"><a href="/contact">Contact</a></li>
-                    </ul>
-                </nav>
-
+                <@navbar.navbar home='current-menu-item'  />
                 <div class="mobile-navigation"></div>
             </div>
         </div>
@@ -54,30 +38,30 @@
 
     <div class="hero">
         <ul class="slides">
-            <li data-bg-image="/images/slider-1.jpg">
+            <li data-bg-image="/images/computerBackground5.jpg">
                 <div class="container">
                     <div class="slide-content">
-                        <h2 class="slide-title">LaboreLabore et dolore magna</h2>
-                        <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.</p>
-                        <a href="#" class="button">See details</a>
+                        <h2 class="slide-title">Проектируй свое будущее</h2>
+                        <p>Пошаговое обучение с личной поддержкой!</p>
+                        <a href="#" class="button">Подробнее...</a>
                     </div>
                 </div>
             </li>
-            <li data-bg-image="/images/slider-2.jpg">
+            <li data-bg-image="/images/computerBackground2.jpg">
                 <div class="container">
                     <div class="slide-content">
-                        <h2 class="slide-title">LaboreLabore et dolore magna</h2>
-                        <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.</p>
-                        <a href="#" class="button">See details</a>
+                        <h2 class="slide-title">Проектируй свое будущее</h2>
+                        <p>Пошаговое обучение с личной поддержкой!</p>
+                        <a href="#" class="button">Подробнее...</a>
                     </div>
                 </div>
             </li>
-            <li data-bg-image="/images/slider-3.jpg">
+            <li data-bg-image="/images/computerBackground3.jpg">
                 <div class="container">
                     <div class="slide-content">
-                        <h2 class="slide-title">LaboreLabore et dolore magna</h2>
-                        <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.</p>
-                        <a href="#" class="button">See details</a>
+                        <h2 class="slide-title">Проектируй свое будущее</h2>
+                        <p>Пошаговое обучение с личной поддержкой!</p>
+                        <a href="#" class="button">Подробнее...</a>
                     </div>
                 </div>
             </li>
