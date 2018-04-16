@@ -3,12 +3,17 @@ package ru.itis.services.interfaces;
 import ru.itis.models.User;
 
 /**
- * Created by Sulaymon on 18.03.2018.
- */
+ * Date 15.04.2018
+ *
+ * @author Hursanov Sulaymon
+ * @version v1.0
+ **/
 public interface UserService {
-    void registerNewUser(User user);
+    void addNewUser(User user);
 
     User getUser(Long id);
 
     void updateUser(User user);
+
+    void updateUserPass(User user);
 }

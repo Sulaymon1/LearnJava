@@ -17,20 +17,14 @@
             rules: {
                 courseName: "required",
                 shortDescription: "required",
-                duration: {
-                    required: true,
-                    minlength: 2
-                },
-                about: "required"
+                about: "required",
+                startDate: "required"
             },
             messages: {
-                courseName: "Please enter course name",
-                shortDescription: "Please enter short description of course",
-                duration: {
-                    required: "Please enter duration",
-                    minlength: "Duration at least must be 90 min"
-                },
-                about: "Please enter about course"
+                courseName: "Введите название курса",
+                shortDescription: "Введите краткое описание курса",
+                about: "Пожалуйста, введите информацию о курсе",
+                startDate: "Укажите дату"
             },
             errorPlacement: function(label, element) {
               label.addClass('mt-2 text-danger');

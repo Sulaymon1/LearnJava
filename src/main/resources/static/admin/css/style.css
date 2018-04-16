@@ -13714,6 +13714,9 @@ input:focus {
         border-bottom: none;
         font-family: "Open Sans", sans-serif;
         font-weight: 500; }
+      .nav-color {
+        color:#aeaeae;
+      }
         .sidebar .nav .nav-item.nav-category .nav-link {
           padding: 2.625rem 1.4rem 0.625rem;
           color: #4fc04d; }

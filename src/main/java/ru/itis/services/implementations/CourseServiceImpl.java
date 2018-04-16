@@ -3,8 +3,10 @@ package ru.itis.services.implementations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.itis.models.Course;
+import ru.itis.models.ImageInfo;
 import ru.itis.repositories.CourseRepository;
 import ru.itis.services.interfaces.CourseService;
+import ru.itis.util.ImageStorageUtil;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,9 +20,11 @@ public class CourseServiceImpl implements CourseService {
     @Autowired
     private CourseRepository courseRepository;
 
+
+
     @Override
     public void addNewCourse(Course course) {
-       courseRepository.save(course);
+        courseRepository.save(course);
     }
 
     @Override
@@ -64,5 +68,10 @@ public class CourseServiceImpl implements CourseService {
             course.setActive(true);
             courseRepository.save(course);
         }
+    }
+
+    @Override
+    public Optional<Course> getCourseByNameAndActive(String name) {
+        return courseRepository.findFirstByCourseNameAndActiveTrue(name);
     }
 }

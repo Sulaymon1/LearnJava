@@ -28,10 +28,10 @@ public class UserRegistrationValidator implements Validator {
     public void validate(Object target, Errors errors) {
         User user = (User) target;
 
-        Optional<User> userOptional = repository.findOneByEmail(user.getEmail());
+        Optional<User> userOptional = repository.findFirstByEmail(user.getEmail());
 
         if (userOptional.isPresent()){
-            errors.reject("bad.emailIsExist","User already exists with this email");
+            errors.reject("bad.emailIsExist","Student already exists with this email");
         }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "error.name", "name must have at least 2 characters");

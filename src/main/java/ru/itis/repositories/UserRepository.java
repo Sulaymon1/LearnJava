@@ -6,8 +6,12 @@ import ru.itis.models.User;
 import java.util.Optional;
 
 /**
- * Created by Sulaymon on 18.03.2018.
- */
+ * Date 15.04.2018
+ *
+ * @author Hursanov Sulaymon
+ * @version v1.0
+ **/
 public interface UserRepository extends JpaRepository<User, Long> {
-    Optional<User> findOneByEmail(String email);
+    Optional<User> findFirstByEmail(String email);
+    User findByEmail(String email);
 }

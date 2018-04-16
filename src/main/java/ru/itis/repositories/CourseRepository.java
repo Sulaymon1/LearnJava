@@ -13,4 +13,5 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
     Optional<Course> findCourseByCourseName(String name);
     List<Course> findAllByActiveTrue();
     Optional<Course> findFirstById(Long id);
+    Optional<Course> findFirstByCourseNameAndActiveTrue(String name);
 }
